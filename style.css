@@ -1,0 +1,129 @@
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f2027);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #ffffff;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px); /* Ефект розмиття фону */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+input::placeholder { color: rgba(255, 255, 255, 0.5); }
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(58, 123, 213, 0.4);
+}
+
+button:active { transform: translateY(0); }
+
+.list-container { margin-top: 30px; }
+
+h2 { font-size: 1.2rem; opacity: 0.8; margin-bottom: 15px; }
+
+.item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.item-header {
+    font-weight: 700;
+    color: #00d2ff;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.item div { font-size: 0.9rem; margin-bottom: 4px; opacity: 0.9; }
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.btn-small {
+    padding: 8px;
+    font-size: 0.75rem;
+    margin-top: 0;
+}
+
+.btn-show { background: rgba(255, 255, 255, 0.1); }
+.btn-edit { background: rgba(255, 193, 7, 0.2); color: #ffc107; border: 1px solid rgba(255, 193, 7, 0.3); }
+.btn-delete { background: rgba(220, 53, 69, 0.2); color: #ff4d5e; border: 1px solid rgba(220, 53, 69, 0.3); }
+
+.btn-show:hover { background: rgba(255, 255, 255, 0.2); }
+.btn-edit:hover { background: rgba(255, 193, 7, 0.3); }
+.btn-delete:hover { background: rgba(220, 53, 69, 0.4); }
